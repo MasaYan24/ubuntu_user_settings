@@ -11,7 +11,7 @@ Or execute following steps one by one.
 
 # Install shell and basic utilities
 ```sh
-sudo apt install -y zsh unzip ruby gcc
+sudo apt install -y zsh unzip ruby gcc make
 sudo chsh -s /bin/zsh $(whoami)
 ```
 
