@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # install shell and basic utilities
-sudo apt install -y zsh unzip ruby curl gcc make
+sudo apt install -y zsh unzip ruby
+sudo apt install -y gcc make pkg-config libglvnd-dev  # for NVIDIA driver
 sudo chsh -s /bin/zsh $(whoami)
 
 # Neovim install and setting
