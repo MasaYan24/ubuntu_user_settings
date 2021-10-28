@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # install shell and basic utilities
-sudo apt install -y zsh unzip ruby
+sudo apt install -y zsh unzip ruby curl
 sudo chsh -s /bin/zsh $(whoami)
 
 # Neovim install and setting
