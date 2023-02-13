@@ -3,6 +3,7 @@
 # install shell and basic utilities
 sudo apt install -y zsh unzip ruby openssh-server curl cifs-utils
 sudo apt install -y gcc make pkg-config libglvnd-dev  # for NVIDIA driver
+sudo apt install -y tmux
 sudo chsh -s /bin/zsh $(whoami)
 
 # install homebrew
