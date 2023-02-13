@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # install shell and basic utilities
-sudo apt install -y zsh unzip ruby openssh-server
+sudo apt install -y zsh unzip ruby openssh-server curl
 sudo apt install -y gcc make pkg-config libglvnd-dev  # for NVIDIA driver
 sudo chsh -s /bin/zsh $(whoami)
 
