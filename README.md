@@ -2,7 +2,7 @@
 
 Execute following
 ```sh
-install_dir=$(mktemp -d)
+install_dir=$(mktemp -d); echo install_dir: $install_dir
 git clone https://github.com/MasaYan24/ubuntu_user_settings.git $install_dir/ubuntu_user_settings/
 sh $install_dir/ubuntu_user_settings/install.sh
 ```
