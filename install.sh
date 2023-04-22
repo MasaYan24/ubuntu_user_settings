@@ -15,9 +15,6 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
   -O $installer
 sh $installer -b -p $HOME/.miniconda
 
-# Path setting
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zprofile
-
 # git setting
 git config --global core.editor vi
 git config --global merge.tool vimdiff
