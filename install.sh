@@ -7,7 +7,7 @@ sh $HOME/.vim/install.sh
 # Prompto setting
 mkdir -p $HOME/.config && echo "command_timeout = 2000" > $HOME/.config/starship.toml
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-if [ -e .zshrc ]; then mv .zshrc{,.bkup}; fi
+if [ -e $HOME/.zshrc ]; then mv $HOME/.zshrc{,.bkup}; fi
 wget https://raw.githubusercontent.com/MasaYan24/zshrc/main/.zshrc -O $HOME/.zshrc
 
 # Developing tool
