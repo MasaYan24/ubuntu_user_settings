@@ -9,7 +9,7 @@ or install one by one as follows.
 
 ## Neovim setting
 ```sh
-git clone https://github.com/MasaYan24/.vim.git $HOME/
+git clone https://github.com/MasaYan24/vim.git $HOME/.vim
 sh $HOME/.vim/install.sh
 ```
 
