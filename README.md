@@ -23,7 +23,7 @@ wget https://raw.githubusercontent.com/MasaYan24/zshrc/main/.zshrc $HOME/.zshrc
 
 ## Developing tool
 ```sh
-installer=$(mktemp).sh
+installer=$(mktemp -d)/miniconda_install.sh
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
   -O $installer
 sh $installer -b -p $HOME/.miniconda
