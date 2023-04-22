@@ -7,12 +7,6 @@ sh ./ubuntu_user_settings/install.sh
 ```
 or install one by one as follows.
 
-## Neovim setting
-```sh
-git clone https://github.com/MasaYan24/vim.git $HOME/.vim
-sh $HOME/.vim/install.sh
-```
-
 ## Prompto setting
 ```sh
 mkdir -p $HOME/.config && echo "command_timeout = 2000" > $HOME/.config/starship.toml
@@ -29,9 +23,10 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
 sh $installer -b -p $HOME/.miniconda
 ```
 
-## Path setting
+## Neovim setting
 ```sh
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zprofile
+git clone https://github.com/MasaYan24/vim.git $HOME/.vim
+sh $HOME/.vim/install.sh
 ```
 
 ## git setting
