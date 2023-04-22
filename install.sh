@@ -11,7 +11,7 @@ if [ -e $HOME/.zshrc ]; then mv $HOME/.zshrc $HOME/.zshrc.bkup; fi
 wget https://raw.githubusercontent.com/MasaYan24/zshrc/main/.zshrc -O $HOME/.zshrc
 
 # Developing tool
-installer=$(mktemp -d)/install_miniconda.sh
+installer=$(mktemp -d)/miniconda_install.sh
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
   -O $installer
 sh $installer -b -p $HOME/.miniconda
