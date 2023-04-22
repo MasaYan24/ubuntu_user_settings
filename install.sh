@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Neovim setting
-git clone https://github.com/MasaYan24/.vim.git $HOME/
+git clone https://github.com/MasaYan24/vim.git $HOME/.vim
 sh $HOME/.vim/install.sh
 
 # Prompto setting
