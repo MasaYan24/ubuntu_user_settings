@@ -11,7 +11,7 @@ sh $install_dir/ubuntu_user_settings/install.sh
 Or install one by one in the manual installation section
 
 ## Summary
-This setting includes following assuming zsh
+This setting includes following objects under assuming z-shell.
 
 - prompto setting using starship
 - zsh auto suggestion
