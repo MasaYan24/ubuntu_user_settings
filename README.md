@@ -18,7 +18,9 @@ export http_proxy="http://your/proxy/IP:PortNumber"
 export https_proxy="http://your/proxy/IP:PortNumber"
 export ftp_proxy="http://your/proxy/IP:PortNumber"
 ```
-The above command have to be executed everytime you restart the shell.
+The above commands have to be executed everytime you restart the shell.
+
+After all the installation is complete, add the same commands to `~/.zshrc`
 
 ## Summary
 This setting includes following objects under assuming z-shell.
