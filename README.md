@@ -10,6 +10,15 @@ sh $install_dir/ubuntu_user_settings/install.sh
 
 Or install one by one in the manual installation section
 
+### Note
+If your computer is under a proxy, execute following before executing set-up script.
+```sh
+# modify the IP and port number
+export http_proxy="http://your/proxy/IP:PortNumber"
+export https_proxy="http://your/proxy/IP:PortNumber"
+export ftp_proxy="http://your/proxy/IP:PortNumber"
+```
+
 ## Summary
 This setting includes following objects under assuming z-shell.
 
