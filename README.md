@@ -1,11 +1,12 @@
-# Ubuntu User Settings
+# Ubuntu User Settings for myself
 
 ## Setting Up
 Execute following
 ```sh
 install_dir=$(mktemp -d); echo install_dir: $install_dir
-git clone https://github.com/MasaYan24/ubuntu_user_settings.git $install_dir/ubuntu_user_settings/
-sh $install_dir/ubuntu_user_settings/install.sh
+myrepo=setting_ubuntu_user_masayan
+git clone https://github.com/MasaYan24/${myrepo}.git $install_dir/$myrepo/
+sh $install_dir/$myrepo/install.sh
 ```
 
 Or install one by one in the manual installation section
@@ -63,7 +64,10 @@ git config --global merge.tool vimdiff
 git config --global merge.conflictstyle diff3
 git config --global mergetool.prompt false
 git config --global credential.helper "cache --timeout 604800"
-git config --global core.pager "LESSCHARSET=utf-8 less"
+brew install git-delta \
+    && git config --global core.pager "delta" \
+    && git config --global interactive.diffFilter "delta --color-only" \
+    && git config --global delta.navigate true
 ```
 
 Then restart your shell to activate conda
