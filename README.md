@@ -4,7 +4,7 @@
 Execute following
 ```sh
 install_dir=$(mktemp -d); echo install_dir: $install_dir
-myrepo=setting_ubuntu_user_masayan
+myrepo="setting_ubuntu_user_masayan"
 git clone https://github.com/MasaYan24/${myrepo}.git $install_dir/$myrepo/
 sh $install_dir/$myrepo/install.sh
 ```
