@@ -22,14 +22,20 @@ if [ -e $HOME/.zshrc ]; then mv $HOME/.zshrc $HOME/.zshrc.bkup; fi
 wget https://raw.githubusercontent.com/MasaYan24/zshrc/main/.zshrc -O $HOME/.zshrc
 
 # Developing tool
-installer=$workdir/miniconda_install.sh
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O $installer \
-    && sh $installer -b -p $HOME/.miniconda
-$HOME/.miniconda/bin/conda config --set auto_activate_base False
-$HOME/.miniconda/bin/conda config --add channels conda-forge
-$HOME/.miniconda/bin/conda config --remove channels defaults
-$HOME/.miniconda/bin/conda config --show channels
-grep -qxF 'export PATH=$HOME/.miniconda/bin:$PATH' $HOME/.zshrc || echo 'export PATH=$HOME/.miniconda/bin:$PATH' >> $HOME/.zshrc
+# installer=$workdir/miniconda_install.sh
+# wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O $installer \
+#     && sh $installer -b -p $HOME/.miniconda
+# $HOME/.miniconda/bin/conda config --set auto_activate_base False
+# $HOME/.miniconda/bin/conda config --add channels conda-forge
+# $HOME/.miniconda/bin/conda config --remove channels defaults
+# $HOME/.miniconda/bin/conda config --show channels
+# grep -qxF 'export PATH=$HOME/.miniconda/bin:$PATH' $HOME/.zshrc || echo 'export PATH=$HOME/.miniconda/bin:$PATH' >> $HOME/.zshrc
+installer=$workdir/miniforge_install.sh
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh" -O $installer \
+    && bash $instaler -b -p $HOME/.miniforge
+$HOME/.miniforge/bin/conda config --set auto_activate_base False
+$HOME/.miniforge/bin/conda config --show channels
+grep -qxF 'export PATH=$HOME/.miniforge/bin:$PATH' $HOME/.zshrc || echo 'export PATH=$HOME/.miniforge/bin:$PATH' >> $HOME/.zshrc
 
 # Neovim setting
 git clone https://github.com/MasaYan24/vim.git $HOME/.vim \
