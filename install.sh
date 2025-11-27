@@ -33,7 +33,7 @@ wget https://raw.githubusercontent.com/MasaYan24/zshrc/main/.zshrc -O $HOME/.zsh
 installer=$workdir/miniforge_install.sh
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh" -O $installer \
     && bash $installer -b -p $HOME/.miniforge
-$HOME/.miniforge/bin/conda config --set auto_activate_base False
+$HOME/.miniforge/bin/conda config --set auto_activate False
 $HOME/.miniforge/bin/conda config --show channels
 grep -qxF 'export PATH=$HOME/.miniforge/bin:$PATH' $HOME/.zshrc || echo 'export PATH=$HOME/.miniforge/bin:$PATH' >> $HOME/.zshrc
 
