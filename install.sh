@@ -37,7 +37,7 @@ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforg
 $install_dir/bin/conda config --set auto_activate False
 $install_dir/bin/conda config --show channels
 # grep -qxF 'export PATH=$install_dir/bin:$PATH' $HOME/.zshrc || echo 'export PATH=$install_dir/bin:$PATH' >> $HOME/.zshrc
-$install_dir/bin/conda init zsh  
+$install_dir/bin/conda init zsh
 
 # Neovim setting
 git clone https://github.com/MasaYan24/vim.git $HOME/.vim \
