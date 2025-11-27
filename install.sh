@@ -31,11 +31,13 @@ wget https://raw.githubusercontent.com/MasaYan24/zshrc/main/.zshrc -O $HOME/.zsh
 # $HOME/.miniconda/bin/conda config --show channels
 # grep -qxF 'export PATH=$HOME/.miniconda/bin:$PATH' $HOME/.zshrc || echo 'export PATH=$HOME/.miniconda/bin:$PATH' >> $HOME/.zshrc
 installer=$workdir/miniforge_install.sh
+install_dir=$HOME/.miniconda
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh" -O $installer \
-    && bash $installer -b -p $HOME/.miniforge
-$HOME/.miniforge/bin/conda config --set auto_activate False
-$HOME/.miniforge/bin/conda config --show channels
-grep -qxF 'export PATH=$HOME/.miniforge/bin:$PATH' $HOME/.zshrc || echo 'export PATH=$HOME/.miniforge/bin:$PATH' >> $HOME/.zshrc
+    && bash $installer -b -p $install_dir
+$install_dir/bin/conda config --set auto_activate False
+$install_dir/bin/conda config --show channels
+# grep -qxF 'export PATH=$install_dir/bin:$PATH' $HOME/.zshrc || echo 'export PATH=$install_dir/bin:$PATH' >> $HOME/.zshrc
+$install_dir/bin/conda init zsh  
 
 # Neovim setting
 git clone https://github.com/MasaYan24/vim.git $HOME/.vim \
